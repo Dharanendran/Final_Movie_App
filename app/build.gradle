@@ -10,9 +10,14 @@ android {
     dataBinding {
         enabled = true
     }
+
+    dataBinding {
+        android.buildFeatures.dataBinding = true
+    }
+
     defaultConfig {
         applicationId "com.example.ticketbooking"
-        minSdk 31 // room database need minimum sdk version of 26
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -33,6 +38,8 @@ android {
         jvmTarget = '1.8'
     }
 }
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
@@ -43,6 +50,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.palette:palette-ktx:1.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -63,7 +71,7 @@ dependencies {
     def fragment_version = "1.5.5"
 
     // Java language implementation
-    implementation "androidx.fragment:fragment:$fragment_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
     // Kotlin
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
 
@@ -77,6 +85,11 @@ dependencies {
 
     implementation "androidx.core:core-ktx:1.9.0"
 
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+
+    implementation 'com.google.code.gson:gson:2.9.1'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 
 
 }

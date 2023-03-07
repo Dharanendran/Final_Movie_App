@@ -1,5 +1,6 @@
 package com.example.ticketbooking.dataRepository.roomDatabase.entities
 
+import android.net.Uri
 import androidx.room.*
 
 @Entity(
@@ -9,7 +10,7 @@ class User(
     var name: String,
     var phoneNO: String,
     var mailId: String,
-    var profilePicture: ByteArray?,
+    var profilePicture:String?,
 )
 {
     @PrimaryKey( autoGenerate = true )

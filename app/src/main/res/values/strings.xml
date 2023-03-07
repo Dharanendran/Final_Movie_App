@@ -25,5 +25,16 @@
     <string name="enter_your_password">Enter Your Password</string>
     <string name="re_enter_password">Re-Enter Password <font color="#FF0000">*</font></string>
     <string name="re_enter_password_hint">Re-Enter Password</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="book">Book</string>
+    <string name="language">Language</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum augue sed dolor tristique, sed convallis libero lacinia. Duis varius lorem in dui aliquet, eget molestie nibh rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent molestie aliquet fermentum. Proin venenatis accumsan risus quis porta. Maecenas volutpat enim id nulla cursus tempor. Nullam vitae tellus non justo semper auctor.Nunc eget elementum lectus. Duis blandit odio nec nibh dignissim aliquet. Integer rhoncus fermentum odio. Nulla eu dictum velit. Aenean luctus felis ut justo mattis, id pharetra augue vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum dolor leo, vestibulum a vulputate a, volutpat id sapien.
+    </string>
+    <string name="select_city">Select City </string>
+    <string name="popular_cities">Popular Cities</string>
+    <string name="cities">Cities</string>
+    <string name="city_name">City Name</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="choose_from_gallery">Choose From Gallery</string>
 
 </resources>

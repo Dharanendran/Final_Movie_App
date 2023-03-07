@@ -27,9 +27,10 @@ import kotlinx.coroutines.withContext
         UserCredential::class,
         FavouriteMovie::class,
         FavouriteTheatre::class,
-        TicketNumber::class
+        TicketNumber::class,
+        PopularCities::class
     ],
-    version = 10
+    version = 12
 )
 abstract class MovieDataBase : RoomDatabase() {
 
@@ -49,6 +50,7 @@ abstract class MovieDataBase : RoomDatabase() {
     abstract fun getFavouriteMovieDao(): FavouriteMovieDao
     abstract fun getFavouriteTheatreDao(): FavouriteTheatreDao
     abstract fun getTicketNumberDao():TicketNumberDao
+    abstract fun getPopularCitiesDao():PopularCitiesDao
 
     companion object {
         private val mutex = Mutex()

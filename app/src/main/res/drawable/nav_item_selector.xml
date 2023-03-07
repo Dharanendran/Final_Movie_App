@@ -5,6 +5,6 @@
         android:state_selected="true"
         android:color = "@color/app_primary_color" />
     <item
-        android:color = "#80FFFFFF" />
+        android:color = "@color/white_faded" />
 
 </selector>

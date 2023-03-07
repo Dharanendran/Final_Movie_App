@@ -1,13 +1,10 @@
-package com.example.ticketbooking
+package com.example.ticketbooking.signup.domain
 
-import android.util.Log
-import com.google.android.gms.auth.api.identity.SignInPassword
-
-object ValidationUtil {
+object ValidationUseCase{
 
     fun isEmailValid(email:String):Boolean
     {
-        val validEmailString = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        val validEmailString = "[A-Za-z\\d._%+-]+@[A-Za-z\\d.-]+\\.[A-Za-z]{2,}"
         return validEmailString.toRegex().matches(email.trim())
     }
 
@@ -44,13 +41,6 @@ object ValidationUtil {
             return true
         return false
 
-//        ^                         Start anchor
-//            (?=.*[A-Z].*[A-Z])        Ensure string has two uppercase letters.
-//        (?=.*[!@#$&*])            Ensure string has one special case letter.
-//        (?=.*[0-9].*[0-9])        Ensure string has two digits.
-//        (?=.*[a-z].*[a-z].*[a-z]) Ensure string has three lowercase letters.
-//        .{8}                      Ensure string is of length 8.
-//        $                         End anchor.
 
     }
 

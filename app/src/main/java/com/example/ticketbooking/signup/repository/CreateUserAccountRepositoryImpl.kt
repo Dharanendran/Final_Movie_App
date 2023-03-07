@@ -12,14 +12,15 @@ import kotlinx.coroutines.launch
 
 class CreateUserAccountRepositoryImpl(private val context: Context): IcreateUserAccountRepository
 {
-    override fun createUserAccount(user: User, username:String, password:String, callback: (id: Long) -> Unit)
+    override fun createUserAccount(user: User, username:String, password:String, wantToInsertUserCredential: Boolean, callback: (id: Long) -> Unit)
     {
         CoroutineScope(Dispatchers.IO).launch {
-            val id = DependencyFactory.getInstance(context).getDataBaseObject().getUserDao().insertUser(user)
-            DependencyFactory.getInstance(context).getDataBaseObject().getUserCredentialDao().insertUserAccount(
-                UserCredential(id, username, password )
-            )
-            Log.v("dharan", "$id")
+            val id:Long
+            DependencyFactory.getInstance(context).let{
+                 id = it.getDataBaseObject().getUserDao().insertUser(user)
+                if(wantToInsertUserCredential)
+                    it.getDataBaseObject().getUserCredentialDao().insertUserAccount( UserCredential(id, username, password ))
+            }
             CoroutineScope(Dispatchers.Main).launch { callback(id) }
         }
     }
